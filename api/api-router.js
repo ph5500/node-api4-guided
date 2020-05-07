@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
   res.status(200).json({ api: "up" });
 });
 
-router.get("/shouts", restricted, (req, res, next) => {
+router.get("/shouts", (req, res, next) => {
   Shouts.find()
     .then(shouts => {
       res.status(200).json(shouts);
@@ -20,7 +20,7 @@ router.get("/shouts", restricted, (req, res, next) => {
     .catch(error => next(error));
 });
 
-router.post("/shouts", restricted, (req, res, next) => {
+router.post("/shouts", (req, res, next) => {
   Shouts.add(req.body)
     .then(shout => {
       res.status(201).json(shout);
