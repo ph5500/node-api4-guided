@@ -2,7 +2,7 @@ const express = require("express");
 
 const Shouts = require("../shouts/shouts-model.js");
 
-const restricted = require("../auth/restricted-middleware");
+
 
 const router = express.Router();
 

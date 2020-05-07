@@ -1,11 +1,11 @@
-module.export = (req, res, next) => {
-    const { authorization } = req.headers;
+// module.export = (req, res, next) => {
+//     const { authorization } = req.headers;
 
-    const password = process.env.API_SECRET;
+//     const password = process.env.API_SECRET;
 
-    if (authorization === 'API_SECRET') {
-        next();
-    } else {
-        res.status(403).json({ you: "have no power here" });
-    }
-};
+//     if (authorization === 'API_SECRET') {
+//         next();
+//     } else {
+//         res.status(403).json({ you: "have no power here" });
+//     }
+// };
